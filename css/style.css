@@ -1,0 +1,1015 @@
+/* ==========================================
+   EvoAxis V2
+   style.css
+   PART 1
+========================================== */
+
+/* ===========================
+   Global
+=========================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fb;
+
+    color:#222;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   Splash Screen
+=========================== */
+
+#splash{
+
+    position:fixed;
+
+    inset:0;
+
+    background:linear-gradient(135deg,#2563eb,#8b5cf6);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.ai-core{
+
+    position:relative;
+
+    width:140px;
+
+    height:140px;
+
+    margin-bottom:35px;
+
+}
+
+.ring{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:50%;
+
+    border:4px solid rgba(255,255,255,.25);
+
+}
+
+.ring1{
+
+    animation:spin 4s linear infinite;
+
+}
+
+.ring2{
+
+    transform:scale(.78);
+
+    animation:spinReverse 3s linear infinite;
+
+}
+
+.core{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:34px;
+
+    height:34px;
+
+    transform:translate(-50%,-50%);
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:0 0 30px white;
+
+}
+
+.app-title{
+
+    color:white;
+
+    font-size:46px;
+
+    font-weight:700;
+
+}
+
+.app-subtitle{
+
+    color:white;
+
+    opacity:.9;
+
+    margin-top:10px;
+
+    font-size:18px;
+
+}
+
+.loader{
+
+    margin-top:35px;
+
+    width:260px;
+
+    height:8px;
+
+    background:rgba(255,255,255,.25);
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progress{
+
+    height:100%;
+
+    width:0;
+
+    background:white;
+
+    animation:loading 2s forwards;
+
+}
+
+/* ===========================
+   Home
+=========================== */
+
+#home{
+
+    display:none;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 60px;
+
+    background:white;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:500;
+
+}
+
+.logo-section h2{
+
+    color:#2563eb;
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.logo-section p{
+
+    color:#666;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+.nav-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.records-btn,
+.dashboard-btn{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px 22px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.records-btn:hover,
+.dashboard-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.25);
+
+}
+
+/* ===========================
+   Main
+=========================== */
+
+main{
+
+    max-width:1550px;
+
+    margin:auto;
+
+    padding:35px;
+
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    border:1px solid rgba(37,99,235,.15);
+
+    margin-bottom:35px;
+
+}
+
+.hero-left span{
+
+    color:#8b5cf6;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    font-size:14px;
+
+}
+
+.hero-left h1{
+
+    font-size:52px;
+
+    margin-top:10px;
+
+    color:#312e81;
+
+}
+
+.hero-left p{
+
+    margin-top:12px;
+
+    color:#666;
+
+    font-size:22px;
+
+    max-width:700px;
+
+}
+
+/* ===========================
+   Hero Right
+=========================== */
+
+.hero-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:18px;
+
+}
+
+/* ===========================
+   Machine Counter
+=========================== */
+
+.machine-count{
+
+    width:165px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    text-align:center;
+
+    border:1px solid rgba(37,99,235,.15);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+}
+
+.machine-count h1{
+
+    font-size:62px;
+
+    color:#60a5fa;
+
+    line-height:1;
+
+}
+
+.machine-count p{
+
+    color:#8b5cf6;
+
+    font-weight:600;
+
+    margin-top:10px;
+
+}
+
+/* ===========================
+   Download Excel
+=========================== */
+
+.excel-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    padding:16px 30px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#4facfe,#8b5cf6);
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(79,172,254,.35);
+
+}
+
+.excel-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 35px rgba(79,172,254,.45);
+
+}
+
+.excel-btn:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes spinReverse{
+
+    from{
+
+        transform:scale(.78) rotate(360deg);
+
+    }
+
+    to{
+
+        transform:scale(.78) rotate(0deg);
+
+    }
+
+}
+
+@keyframes loading{
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+/* ==========================================
+   PART 2
+   Search + Machine Cards
+========================================== */
+
+/* ===========================
+   Search
+=========================== */
+
+.search-section{
+
+    margin-bottom:35px;
+
+}
+
+.search-section input{
+
+    width:100%;
+
+    padding:18px 24px;
+
+    font-size:17px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.search-section input:focus{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 15px 35px rgba(37,99,235,.18);
+
+}
+
+/* ===========================
+   Machine Grid
+=========================== */
+
+.machine-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+/* ===========================
+   Machine Card
+=========================== */
+
+.machine-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Blue Glow */
+
+.machine-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(79,172,254,.15),
+
+        transparent
+
+    );
+
+    transition:.6s;
+
+}
+
+.machine-card:hover::before{
+
+    left:100%;
+
+}
+
+/* Hover */
+
+.machine-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.18);
+
+    border-color:#60a5fa;
+
+}
+
+/* Machine ID */
+
+.machine-id{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    background:#eef5ff;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+/* Machine Name */
+
+.machine-name{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+    line-height:1.4;
+
+}
+
+/* Small Arrow */
+
+.machine-card::after{
+
+    content:"→";
+
+    position:absolute;
+
+    right:22px;
+
+    bottom:18px;
+
+    color:#60a5fa;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.machine-card:hover::after{
+
+    transform:translateX(8px);
+
+}
+
+/* ===========================
+   No Machine Found
+=========================== */
+
+.no-machine{
+
+    grid-column:1/-1;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.no-machine h3{
+
+    font-size:32px;
+
+    color:#ef4444;
+
+    margin-bottom:12px;
+
+}
+
+.no-machine p{
+
+    color:#666;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   Card Animation
+=========================== */
+
+.machine-card{
+
+    animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================
+   PART 3
+   Responsive + Premium Finish
+========================================== */
+
+/* ===========================
+   Large Screens
+=========================== */
+
+@media(min-width:1700px){
+
+    main{
+
+        max-width:1700px;
+
+    }
+
+}
+
+/* ===========================
+   Laptop
+=========================== */
+
+@media(max-width:1200px){
+
+    .hero{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:35px;
+
+    }
+
+    .hero-right{
+
+        width:100%;
+
+        flex-direction:row;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+    }
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:900px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:22px;
+
+    }
+
+    .nav-buttons{
+
+        width:100%;
+
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+    }
+
+    .hero{
+
+        padding:28px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:42px;
+
+    }
+
+    .hero-left p{
+
+        font-size:18px;
+
+    }
+
+    .machine-grid{
+
+        grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:600px){
+
+    main{
+
+        padding:18px;
+
+    }
+
+    header{
+
+        padding:18px;
+
+    }
+
+    .logo-section h2{
+
+        font-size:26px;
+
+    }
+
+    .hero{
+
+        padding:22px;
+
+    }
+
+    .hero-left h1{
+
+        font-size:32px;
+
+    }
+
+    .hero-left p{
+
+        font-size:16px;
+
+    }
+
+    .hero-right{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .machine-count{
+
+        width:100%;
+
+    }
+
+    .excel-btn{
+
+        width:100%;
+
+    }
+
+    .records-btn,
+
+    .dashboard-btn{
+
+        width:100%;
+
+    }
+
+    .machine-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+
+        #60a5fa,
+
+        #8b5cf6
+
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:linear-gradient(
+
+        #2563eb,
+
+        #7c3aed
+
+    );
+
+}
+
+/* ===========================
+   Selection
+=========================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/* ===========================
+   Smooth Transition
+=========================== */
+
+button,
+input,
+.machine-card{
+
+    transition:.3s ease;
+
+}
+
+/* ===========================
+   Footer Space
+=========================== */
+
+body{
+
+    padding-bottom:40px;
+
+}
