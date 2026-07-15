@@ -127,11 +127,9 @@ async function loadDashboard() {
 
         }
 
-        // -----------------------------
-        // MTBF
-        // -----------------------------
+        
 
-        mtbf.textContent = "Coming Soon";
+        
 
         // -----------------------------
         // Machine Ranking
