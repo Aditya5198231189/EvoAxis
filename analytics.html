@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>EvoAxis | Maintenance Analytics</title>
+
+<link rel="stylesheet"
+href="css/analytics.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<div>
+
+<a href="index.html"
+class="back-btn">
+
+← Home
+
+</a>
+
+<h1>
+
+Maintenance Analytics
+
+</h1>
+
+<p>
+
+Monthly Maintenance Performance Analysis
+
+</p>
+
+</div>
+
+</header>
+
+<section class="graph-card">
+
+<h2>
+
+📈 Monthly MTTR Trend
+
+</h2>
+
+<div class="chart-container">
+
+<canvas id="mttrChart"></canvas>
+
+</div>
+
+</section>
+
+<section class="graph-card">
+
+<h2>
+
+📊 Monthly MTBF Trend
+
+</h2>
+
+<div class="chart-container">
+
+<canvas id="mtbfChart"></canvas>
+
+</div>
+
+</section>
+
+<section class="graph-card">
+
+<h2>
+
+⚠ Machine Failure Severity (%)
+
+</h2>
+
+<div class="chart-container">
+
+<canvas id="severityChart"></canvas>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="js/config.js"></script>
+
+<script src="js/analytics.js"></script>
+
+</body>
+
+</html>

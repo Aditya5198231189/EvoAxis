@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>EvoAxis | Breakdown Form</title>
+
+    <link rel="stylesheet" href="css/form.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- ===========================
+            HEADER
+    ============================ -->
+
+    <header>
+
+        <button class="back-btn" onclick="history.back()">
+
+            ← Back
+
+        </button>
+
+        <div>
+
+            <h2>EvoAxis</h2>
+
+            <p>Breakdown Entry Form</p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ===========================
+            FORM CARD
+    ============================ -->
+
+    <main>
+
+        <form id="breakdownForm">
+
+            <!-- Machine Details -->
+
+            <div class="card">
+
+                <h3>Machine Information</h3>
+
+                <label>Machine ID</label>
+
+                <input
+                    type="text"
+                    id="machineID"
+                    readonly>
+
+                <label>Machine Name</label>
+
+                <input
+                    type="text"
+                    id="machineName"
+                    readonly>
+
+            </div>
+
+
+            <!-- Operator Details -->
+
+            <div class="card">
+
+                <h3>Maintenance Details</h3>
+
+                <label>Operator Name</label>
+
+                <input
+                    type="text"
+                    id="operatorName"
+                    placeholder="Enter Operator Name"
+                    required>
+
+                <label>Attended By</label>
+
+                <input
+                    type="text"
+                    id="attendedBy"
+                    placeholder="Maintenance Engineer"
+                    required>
+
+            </div>
+
+
+
+            <!-- Date & Time -->
+
+            <div class="card">
+
+                <h3>Breakdown Duration</h3>
+
+                <label>Start Date</label>
+
+                <input
+                    type="date"
+                    id="startDate"
+                    required>
+
+                <label>Start Time</label>
+
+                <input
+                    type="time"
+                    id="startTime"
+                    required>
+
+                <label>End Date</label>
+
+                <input
+                    type="date"
+                    id="endDate"
+                    required>
+
+                <label>End Time</label>
+
+                <input
+                    type="time"
+                    id="endTime"
+                    required>
+
+                <label>Total Downtime</label>
+
+                <input
+                    type="text"
+                    id="downtime"
+                    readonly
+                    placeholder="Calculated Automatically">
+
+            </div>
+
+
+
+            <!-- Breakdown Details -->
+
+            <div class="card">
+
+                <h3>Breakdown Information</h3>
+
+                <label>Problem Nature</label>
+
+                <textarea
+                    id="problemNature"
+                    rows="3"
+                    placeholder="Describe the breakdown..."
+                    required></textarea>
+
+                <label>Corrective Action</label>
+
+                <textarea
+                    id="correctiveAction"
+                    rows="4"
+                    placeholder="Action Taken..."
+                    required></textarea>
+
+                <label>Spare Used</label>
+
+                <input
+                    type="text"
+                    id="spareUsed"
+                    placeholder="Enter Spare Used">
+
+                <label>Root Cause</label>
+
+                <textarea
+                    id="rootCause"
+                    rows="4"
+                    placeholder="Root Cause..."
+                    required></textarea>
+
+            </div>
+
+
+
+            <!-- Submit -->
+
+            <button
+                type="submit"
+                class="submit-btn">
+
+                Submit Breakdown
+
+            </button>
+
+        </form>
+
+    </main>
+
+
+
+    <script src="js/config.js"></script>
+<script src="js/form.js"></script>
+
+</body>
+
+</html>

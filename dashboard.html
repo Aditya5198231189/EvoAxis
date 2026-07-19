@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EvoAxis | Dashboard</title>
+    <div class="dashboard-actions">
+
+    <button id="refreshDashboard" class="refresh-btn">
+
+        🔄 Refresh Dashboard
+
+    </button>
+
+</div>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===========================
+     Header
+=========================== -->
+
+<header>
+
+    <button
+        class="back-btn"
+        onclick="window.location.href='index.html'">
+
+        ←
+
+    </button>
+
+    <div>
+
+        <h2>EvoAxis</h2>
+
+        <p>Maintenance Analytics Dashboard</p>
+
+    </div>
+
+</header>
+
+<!-- ===========================
+     Main
+=========================== -->
+
+<main>
+
+    <!-- Dashboard Title -->
+
+    <section class="dashboard-title">
+
+        <h1>Maintenance Dashboard</h1>
+
+        <p>
+
+            Live Analytics From Google Sheets
+
+        </p>
+
+    </section>
+
+    <!-- ===========================
+         Statistics Cards
+    =========================== -->
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <h3>Total Breakdowns</h3>
+
+            <h1 id="totalBreakdowns">
+
+                0
+
+            </h1>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>Total Downtime</h3>
+
+            <h1 id="totalDowntime">
+
+                0 Min
+
+            </h1>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>MTTR</h3>
+
+            <h1 id="mttr">
+
+                0 Min
+
+            </h1>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h3>MTBF</h3>
+
+            <h1 id="mtbf">
+
+                Calculating...
+
+            </h1>
+
+        </div>
+
+    </section>
+
+    <!-- ===========================
+         Doughnut Chart
+    =========================== -->
+
+    <section class="chart-card">
+
+        <h2>
+
+            Machine Breakdown Distribution
+
+        </h2>
+
+        <canvas id="breakdownChart">
+
+        </canvas>
+
+    </section>
+
+    <!-- ===========================
+         Machine Ranking
+    =========================== -->
+
+    <section class="ranking-card">
+
+        <h2>
+
+            Machine Breakdown Ranking
+
+        </h2>
+
+        <div id="machineRanking">
+
+            <p>
+
+                Loading...
+
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
